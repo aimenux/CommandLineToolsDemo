@@ -12,9 +12,10 @@ Using various command line tools frameworks
 > - [Spectre.Console.Cli](https://spectreconsole.net/cli/)
 >
 > In order to run commands, type :
-> - [App01.exe] upper -i [input]
-> - [App01.exe] lower -i [input]
-> - [App01.exe] --version
-> - [App01.exe] --help
+> - [App.exe] upper -i [input]
+> - [App.exe] lower -i [input]
+> - [App.exe] --version
+> - [App.exe] --help
+>
 
 **`Tools`** : vs22, net 6.0
