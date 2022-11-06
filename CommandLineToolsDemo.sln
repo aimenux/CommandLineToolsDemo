@@ -21,6 +21,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cocona", "Cocona", "{0DB2B961-9E40-4834-B373-EE8303AA3BFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App01", "src\Cocona\App01\App01.csproj", "{13890F41-AAE6-4F1A-A27C-1DC7DD321816}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,10 @@ Global
 		{0E4E75D7-0C3D-48ED-872E-61A47B67F080}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E4E75D7-0C3D-48ED-872E-61A47B67F080}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E4E75D7-0C3D-48ED-872E-61A47B67F080}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13890F41-AAE6-4F1A-A27C-1DC7DD321816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13890F41-AAE6-4F1A-A27C-1DC7DD321816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13890F41-AAE6-4F1A-A27C-1DC7DD321816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13890F41-AAE6-4F1A-A27C-1DC7DD321816}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -47,6 +55,7 @@ Global
 		{ECB8DE59-CC97-4028-A10A-5010C5AEA36E} = {8059E4ED-19C2-4A95-9E18-D0055230F0A5}
 		{45C45FEA-24CB-48F7-BAA5-BB005A316CD2} = {2F76CF14-84A7-42B0-B920-04E741F65492}
 		{0E4E75D7-0C3D-48ED-872E-61A47B67F080} = {A5DA182A-E770-4D1B-A167-D7D9D9BAA176}
+		{13890F41-AAE6-4F1A-A27C-1DC7DD321816} = {0DB2B961-9E40-4834-B373-EE8303AA3BFA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {56B791DB-E672-4A21-B50C-3E917B9F5EBE}

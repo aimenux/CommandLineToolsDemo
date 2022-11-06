@@ -4,7 +4,7 @@ namespace App01;
 
 public static class Program
 {
-    public static Task Main(string[] args)
+    public static int Main(string[] args)
     {
         var app = new CommandLineApplication
         {
@@ -55,6 +55,6 @@ public static class Program
             });
         });
 
-        return app.ExecuteAsync(args);
+        return app.Execute(args);
     }
 }
