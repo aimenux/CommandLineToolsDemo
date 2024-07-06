@@ -19,4 +19,4 @@ Using various command line tools frameworks
 > - [App.exe] --help
 >
 
-**`Tools`** : vs22, net 6.0
+**`Tools`** : net 8.0
