@@ -1,5 +1,8 @@
 <Project>
     <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <OutputType>Exe</OutputType>
+        <ImplicitUsings>enable</ImplicitUsings>
         <Deterministic>true</Deterministic>
         <RunCodeAnalysis>true</RunCodeAnalysis>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>

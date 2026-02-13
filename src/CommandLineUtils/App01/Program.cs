@@ -22,10 +22,7 @@ public static class Program
             cmd.Description = Constants.UpperCommandDescription;
             var inputOption = cmd.Option<string>("--input|-i", Constants.InputOptionDescription,
                 CommandOptionType.SingleValue,
-                configuration =>
-                {
-                    configuration.IsRequired();
-                });
+                configuration => configuration.IsRequired());
             cmd.OnExecute(() =>
             {
                 if (inputOption.HasValue())
@@ -41,10 +38,7 @@ public static class Program
             cmd.AddName(Constants.LowerCommandAlias);
             cmd.Description = Constants.LowerCommandDescription;
             var inputOption = cmd.Option<string>("--input|-i", Constants.InputOptionDescription, CommandOptionType.SingleValue,
-                configuration =>
-                {
-                    configuration.IsRequired();
-                });
+                configuration => configuration.IsRequired());
             cmd.OnExecute(() =>
             {
                 if (inputOption.HasValue())

@@ -7,10 +7,10 @@ public static class Program
     public static int Main(string[] args)
     {
         var app = CoconaApp.Create(args);
-
+        
         app
             .AddCommand(Constants.UpperCommandName,
-                ([Option("input", new[] {'i'}, Description = Constants.InputOptionDescription)] string input) =>
+                ([Option("input", ['i'], Description = Constants.InputOptionDescription)] string input) =>
                 {
                     if (input is not null)
                     {
@@ -22,7 +22,7 @@ public static class Program
 
         app
             .AddCommand(Constants.LowerCommandName,
-                ([Option("input", new[] {'i'}, Description = Constants.InputOptionDescription)] string input) =>
+                ([Option("input", ['i'], Description = Constants.InputOptionDescription)] string input) =>
                 {
                     if (input is not null)
                     {

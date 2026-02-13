@@ -1,64 +1,73 @@
 ﻿using System.CommandLine;
 
-namespace App01
+namespace App01;
+
+public static class Program
 {
-    public static class Program
+    public static int Main(string[] args)
     {
-        public static int Main(string[] args)
+        var app = new RootCommand(Constants.Description)
         {
-            var app = new RootCommand
-            {
-                Name = Constants.Name, 
-                Description = Constants.Description
-            };
+            BuildUpperCommand(),
+            BuildLowerCommand()
+        };
 
-            app.AddCommand(BuildUpperCommand());
-            app.AddCommand(BuildLowerCommand());
-            return app.Invoke(args);
-        }
+        return app.Parse(args).Invoke();
+    }
 
-        private static Command BuildUpperCommand()
+    private static Command BuildUpperCommand()
+    {
+        var inputOption = new Option<string>("input", "i")
         {
-            var cmd = new Command(Constants.UpperCommandName, Constants.UpperCommandDescription);
-            cmd.AddAlias(Constants.UpperCommandAlias);
-            var inputOption = new Option<string>(new[] {"--input", "-i"}, Constants.InputOptionDescription)
-            {
-                IsRequired = true,
-                Arity = ArgumentArity.ExactlyOne
-            };
-            cmd.AddOption(inputOption);
-            cmd.SetHandler(context =>
-            {
-                var inputOptionValue = context.ParseResult.GetValueForOption(inputOption);
-                if (inputOptionValue is not null)
-                {
-                    Constants.Color.WriteLine($"Upper = '{inputOptionValue.ToUpper()}'");
-                }
-                context.ExitCode = 0;
-            });
-            return cmd;
-        }
-
-        private static Command BuildLowerCommand()
+            Required = true,
+            Arity = ArgumentArity.ExactlyOne,
+            Description = Constants.InputOptionDescription,
+        };
+        
+        var cmd = new Command(Constants.UpperCommandName, Constants.UpperCommandDescription)
         {
-            var cmd = new Command(Constants.LowerCommandName, Constants.LowerCommandDescription);
-            cmd.AddAlias(Constants.LowerCommandAlias);
-            var inputOption = new Option<string>(new[] {"--input", "-i"}, Constants.InputOptionDescription)
+            Aliases = { Constants.UpperCommandAlias },
+            Options = { inputOption }
+        };
+        
+        cmd.SetAction(parseResult =>
+        {
+            var inputOptionValue = parseResult.GetValue(inputOption);
+            if (inputOptionValue is not null)
             {
-                IsRequired = true,
-                Arity = ArgumentArity.ExactlyOne
-            };
-            cmd.AddOption(inputOption);
-            cmd.SetHandler(context =>
+                Constants.Color.WriteLine($"Upper = '{inputOptionValue.ToUpper()}'");
+            } 
+            return 0;
+        });
+        
+        return cmd;
+    }
+
+    private static Command BuildLowerCommand()
+    {
+        var inputOption = new Option<string>("input", "i")
+        {
+            Required = true,
+            Arity = ArgumentArity.ExactlyOne,
+            Description = Constants.InputOptionDescription,
+        };
+        
+        var cmd = new Command(Constants.LowerCommandName, Constants.LowerCommandDescription)
+        {
+            Aliases = { Constants.LowerCommandAlias },
+            Options = { inputOption }
+        };
+        
+        cmd.SetAction(parseResult =>
+        {
+            var inputOptionValue = parseResult.GetValue(inputOption);
+            if (inputOptionValue is not null)
             {
-                var inputOptionValue = context.ParseResult.GetValueForOption(inputOption);
-                if (inputOptionValue is not null)
-                {
-                    Constants.Color.WriteLine($"Lower = '{inputOptionValue.ToLower()}'");
-                }
-                context.ExitCode = 0;
-            });
-            return cmd;
-        }
+                Constants.Color.WriteLine($"Lower = '{inputOptionValue.ToLower()}'");
+            } 
+            return 0;
+        });
+        
+        return cmd;
     }
 }
