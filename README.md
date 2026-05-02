@@ -12,6 +12,7 @@ Using various command line tools frameworks
 > - [Spectre.Console.Cli](https://spectreconsole.net/cli)
 > - [Cocona](https://github.com/mayuki/Cocona)
 > - [CliFx](https://github.com/Tyrrrz/CliFx)
+> - [ConsoleAppFramework](https://github.com/Cysharp/ConsoleAppFramework)
 >
 > In order to run commands, type :
 > - [App.exe] upper -i [input]

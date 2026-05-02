@@ -6,6 +6,7 @@
   <ItemGroup>
     <PackageVersion Include="CliFx" Version="3.0.0" />
     <PackageVersion Include="Cocona" Version="2.2.0" />
+    <PackageVersion Include="ConsoleAppFramework" Version="5.7.13" />
     <PackageVersion Include="McMaster.Extensions.CommandLineUtils" Version="5.1.0" />
     <PackageVersion Include="Spectre.Console.Cli" Version="0.55.0" />
     <PackageVersion Include="System.CommandLine" Version="2.0.7" />
