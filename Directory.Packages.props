@@ -4,6 +4,7 @@
     <CentralPackageTransitivePinningEnabled>false</CentralPackageTransitivePinningEnabled>
   </PropertyGroup>
   <ItemGroup>
+    <PackageVersion Include="CliFx" Version="3.0.0" />
     <PackageVersion Include="Cocona" Version="2.2.0" />
     <PackageVersion Include="McMaster.Extensions.CommandLineUtils" Version="5.1.0" />
     <PackageVersion Include="Spectre.Console.Cli" Version="0.55.0" />
