@@ -19,4 +19,4 @@ Using various command line tools frameworks
 > - [App.exe] --help
 >
 
-**`Tools`** : net 8.0
+**`Tools`** : net 10.0

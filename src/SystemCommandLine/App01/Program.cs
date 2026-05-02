@@ -17,7 +17,7 @@ public static class Program
 
     private static Command BuildUpperCommand()
     {
-        var inputOption = new Option<string>("input", "i")
+        var inputOption = new Option<string>("-i", "--input")
         {
             Required = true,
             Arity = ArgumentArity.ExactlyOne,
@@ -45,7 +45,7 @@ public static class Program
 
     private static Command BuildLowerCommand()
     {
-        var inputOption = new Option<string>("input", "i")
+        var inputOption = new Option<string>("-i", "--input")
         {
             Required = true,
             Arity = ArgumentArity.ExactlyOne,
