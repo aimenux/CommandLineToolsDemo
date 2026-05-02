@@ -1,0 +1,29 @@
+<Solution>
+  <Folder Name="/1-SystemCommandLine/">
+    <Project Path="src/SystemCommandLine/App01/App01.csproj" />
+  </Folder>
+  <Folder Name="/2-CommandLineUtils/">
+    <Project Path="src/CommandLineUtils/App01/App01.csproj" />
+  </Folder>
+  <Folder Name="/3-SpectreConsoleCli/">
+    <Project Path="src/SpectreConsoleCli/App01/App01.csproj" />
+  </Folder>
+  <Folder Name="/4-Cocona/">
+    <Project Path="src/Cocona/App01/App01.csproj" />
+  </Folder>
+  <Folder Name="/5-CliFx/">
+    <Project Path="src/CliFx/App01/App01.csproj" />
+  </Folder>
+  <Folder Name="/6-ConsoleAppFramework/">
+    <Project Path="src/ConsoleAppFramework/App01/App01.csproj" />
+  </Folder>
+  <Folder Name="/Files/">
+    <File Path=".editorconfig" />
+    <File Path=".github/workflows/ci.yml" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
+    <File Path="README.md" />
+  </Folder>
+</Solution>
